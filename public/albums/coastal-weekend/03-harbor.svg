@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1067" viewBox="0 0 1600 1067">
+  <rect width="1600" height="1067" fill="#b7c9d4"/>
+  <rect y="620" width="1600" height="447" fill="#4a6d78"/>
+  <path d="M0 620 Q300 580 600 630 T1200 610 T1600 640 L1600 620 Z" fill="#6f93a0"/>
+  <g fill="#2c4550">
+    <path d="M280 620 L310 480 L360 620 Z"/>
+    <path d="M520 620 L560 420 L620 620 Z"/>
+    <path d="M780 620 L820 500 L870 620 Z"/>
+    <path d="M1080 620 L1120 450 L1180 620 Z"/>
+  </g>
+  <g fill="#dfe8ee" opacity="0.5">
+    <ellipse cx="340" cy="500" rx="18" ry="8"/>
+    <ellipse cx="590" cy="460" rx="22" ry="9"/>
+    <ellipse cx="840" cy="520" rx="16" ry="7"/>
+    <ellipse cx="1140" cy="480" rx="20" ry="8"/>
+  </g>
+  <text x="80" y="100" fill="#1e3038" font-family="Georgia, serif" font-size="42" opacity="0.55">Harbor</text>
+</svg>
