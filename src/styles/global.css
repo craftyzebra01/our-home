@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap');
+
+:root {
+  --color-ink: #1e2f2c;
+  --color-ink-soft: #3d524c;
+  --color-muted: #5f736c;
+  --color-paper: #eef3ef;
+  --color-paper-deep: #d7e4dc;
+  --color-sea: #3f6f6a;
+  --color-sea-deep: #2c524e;
+  --color-sand: #e4d3b2;
+  --color-highlight: #f7faf7;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Nunito Sans', 'Segoe UI', sans-serif;
+  --space: clamp(1rem, 2vw, 1.75rem);
+  --max: 68rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--color-ink);
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #cfe0d6 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%, #d9e6e8 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-paper) 0%, #e6eee8 45%, var(--color-paper-deep) 100%);
+  background-attachment: fixed;
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+  line-height: 1.55;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.page {
+  width: min(100% - 2 * var(--space), var(--max));
+  margin-inline: auto;
+  padding-block: clamp(2rem, 6vw, 4.5rem) 4rem;
+}
+
+.home-hero {
+  min-height: min(72vh, 40rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.85rem;
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+  animation: rise 700ms ease-out both;
+}
+
+.home-eyebrow {
+  margin: 0;
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.home-brand {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 5.75rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--color-sea-deep);
+}
+
+.home-tagline {
+  margin: 0;
+  max-width: 28rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  font-weight: 500;
+  color: var(--color-ink-soft);
+}
+
+.home-intro {
+  margin: 0.5rem 0 0;
+  max-width: 36rem;
+  white-space: pre-line;
+  color: var(--color-ink-soft);
+  font-size: 1.05rem;
+}
+
+.home-albums {
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-sea) 22%, transparent);
+  animation: rise 800ms ease-out 120ms both;
+}
+
+.section-heading {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 500;
+}
+
+.section-lede {
+  margin: 0.4rem 0 1.75rem;
+  color: var(--color-muted);
+  max-width: 28rem;
+}
+
+.album-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.album-list-empty {
+  color: var(--color-muted);
+}
+
+.album-link {
+  display: grid;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 220ms ease;
+}
+
+.album-link:hover,
+.album-link:focus-visible {
+  transform: translateY(-2px);
+}
+
+.album-link:focus-visible {
+  outline: 2px solid var(--color-sea);
+  outline-offset: 4px;
+}
+
+.album-link-media {
+  display: block;
+  overflow: hidden;
+  border-radius: 0;
+  aspect-ratio: 3 / 2;
+  background: color-mix(in srgb, var(--color-sea) 12%, white);
+}
+
+.album-link-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 420ms ease;
+}
+
+.album-link:hover .album-link-media img,
+.album-link:focus-visible .album-link-media img {
+  transform: scale(1.03);
+}
+
+.album-link-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+}
+
+.album-link-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+}
+
+.album-link-date {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.album-page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.album-header {
+  display: grid;
+  gap: 0.35rem;
+  animation: rise 500ms ease-out both;
+}
+
+.album-title {
+  margin: 0.4rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.05;
+  color: var(--color-sea-deep);
+}
+
+.album-date,
+.album-description {
+  margin: 0;
+  color: var(--color-muted);
+  max-width: 36rem;
+}
+
+.text-link {
+  width: fit-content;
+  color: var(--color-sea);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  text-decoration: underline;
+}
+
+.not-found {
+  margin: 0;
+}
+
+.album-viewer {
+  display: grid;
+  gap: 1rem;
+  animation: rise 650ms ease-out 80ms both;
+}
+
+.album-viewer-figure {
+  margin: 0;
+  background: var(--color-highlight);
+  border: 1px solid color-mix(in srgb, var(--color-sea) 16%, transparent);
+}
+
+.album-viewer-image {
+  width: 100%;
+  max-height: min(70vh, 44rem);
+  object-fit: contain;
+  background:
+    linear-gradient(135deg, #edf3ef 0%, #e3ece8 50%, #d9e5e4 100%);
+  animation: fade-in 320ms ease both;
+}
+
+.album-viewer-caption {
+  margin: 0;
+  padding: 0.85rem 1rem 1rem;
+  color: var(--color-ink-soft);
+}
+
+.album-viewer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.album-viewer-counter {
+  margin: 0;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.album-nav-button {
+  appearance: none;
+  border: 1px solid color-mix(in srgb, var(--color-sea) 35%, transparent);
+  background: color-mix(in srgb, white 70%, var(--color-paper));
+  color: var(--color-sea-deep);
+  padding: 0.65rem 1.1rem;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease;
+}
+
+.album-nav-button:hover:not(:disabled),
+.album-nav-button:focus-visible:not(:disabled) {
+  background: white;
+  border-color: var(--color-sea);
+}
+
+.album-nav-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 720px) {
+  .album-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .album-viewer-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .album-viewer-counter {
+    order: -1;
+    width: 100%;
+    text-align: center;
+  }
+}
