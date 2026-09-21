@@ -1,0 +1,14 @@
+---
+title: Restaurants
+eleventyNavigation:
+    key: Restaurants
+layout: mylayout.njk
+---
+<ul class="restaurants-metadata">
+    {%- for r in restaurants %}
+        <li>
+            {{ r.name }} - {{ r.blurb }}
+            [{{ r.tags }}]
+        </li>
+    {%- endfor %}
+</ul>

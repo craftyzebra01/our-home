@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Amore Sushi",
+        "blurb": "Amore Sushi Blurb",
+        "tags": ["sushi", "lakeview"]
+    },
+    {
+        "name": "Sushi Taku Rotary",
+        "blurb": "Cool Conveyor Belts",
+        "tags": ["sushi", "lincoln park"]
+    }
+]
