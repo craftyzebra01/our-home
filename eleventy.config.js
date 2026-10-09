@@ -8,6 +8,7 @@ export default function (eleventyConfig) {
 };
 
 export const config = {
+    pathPrefix: process.env.BASE_PATH || "/",
     dir: {
         input: "content",
         includes: "../_includes", // relative to input I think

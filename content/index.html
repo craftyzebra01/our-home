@@ -10,7 +10,7 @@ layout: mylayout.html
 <div class="slideshow" data-interval="5000">
     <div class="slideshow-frame">
         {% for photo in photos %}
-        <img src="{{ photo.src }}" alt="{{ photo.alt }}"{% unless forloop.first %} hidden{% endunless %}>
+        <img src="{{ photo.src | url }}" alt="{{ photo.alt }}"{% unless forloop.first %} hidden{% endunless %}>
         {% endfor %}
     </div>
     <div class="slideshow-controls">
@@ -58,5 +58,5 @@ layout: mylayout.html
     <li>Stephanie videos placeholder</li>
     <li><a href="https://patricklawler.dev">patricklawler.dev</a> - Very new</li>
 </ul>
-<link rel="stylesheet" href="/css/slideshow.css">
-<script src="/scripts/slideshow.js" defer></script>
+<link rel="stylesheet" href="{{ '/css/slideshow.css' | url }}">
+<script src="{{ '/scripts/slideshow.js' | url }}" defer></script>
