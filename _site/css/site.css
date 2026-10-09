@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    background: #e4ddd2;
+    color: #2b2926;
+}
+
+.site {
+    width: 33.333vw;
+    min-height: 100vh;
+    margin-inline: auto;
+    padding: 1.5rem 1.25rem 3rem;
+    box-sizing: border-box;
+    background: #f7f4ef;
+}

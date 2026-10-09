@@ -2,6 +2,9 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 
 export default function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addPassthroughCopy("content/photos");
+    eleventyConfig.addPassthroughCopy("content/css");
+    eleventyConfig.addPassthroughCopy("content/scripts");
 };
 
 export const config = {
