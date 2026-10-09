@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background: #f4efe8;
+    color: #2b2926;
+}
+
+.site {
+    width: 33.333vw;
+    margin-inline: auto;
+    padding: 1.5rem 0 3rem;
+    box-sizing: border-box;
+}
