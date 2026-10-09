@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="/css/site.css">
+    </head>
+    <body>
+        <div class="site">
+            {% comment %}
+            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
+            {% endcomment %}
+            {{ content }}
+        </div>
+    </body>
+</html>
