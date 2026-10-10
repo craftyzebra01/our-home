@@ -5,10 +5,18 @@ body {
 }
 
 .site {
-    width: 33.333vw;
+    width: 40vw;
     min-height: 100vh;
     margin-inline: auto;
     padding: 1.5rem 1.25rem 3rem;
     box-sizing: border-box;
     background: #f7f4ef;
+}
+
+@media (max-width: 800px) {
+    .site {
+        width: auto;
+        margin: 0.75rem;
+        min-height: calc(100vh - 1.5rem);
+    }
 }
